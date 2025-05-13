@@ -1,0 +1,176 @@
+{
+    "room_contexts": {
+        "workspace": {
+            "key_objects": [
+                "laptop",
+                "keyboard",
+                "mouse",
+                "desk",
+                "monitor"
+            ],
+            "threshold": 2,
+            "temporal_patterns": {
+                "working_hours": [
+                    "08:00",
+                    "18:00"
+                ],
+                "activity_level": "high"
+            }
+        },
+        "kitchen": {
+            "key_objects": [
+                "refrigerator",
+                "sink",
+                "bowl",
+                "fork",
+                "knife",
+                "spoon",
+                "cup",
+                "microwave"
+            ],
+            "threshold": 2,
+            "temporal_patterns": {
+                "meal_times": [
+                    "07:00-09:00",
+                    "12:00-14:00",
+                    "18:00-20:00"
+                ],
+                "activity_level": "moderate"
+            }
+        },
+        "living_room": {
+            "key_objects": [
+                "couch",
+                "tv",
+                "remote",
+                "potted plant",
+                "coffee table"
+            ],
+            "threshold": 2,
+            "temporal_patterns": {
+                "relaxation_hours": [
+                    "18:00",
+                    "23:00"
+                ],
+                "activity_level": "low"
+            }
+        },
+        "bedroom": {
+            "key_objects": [
+                "bed",
+                "book",
+                "clock",
+                "pillow",
+                "lamp"
+            ],
+            "threshold": 1,
+            "temporal_patterns": {
+                "sleep_hours": [
+                    "22:00",
+                    "07:00"
+                ],
+                "activity_level": "low"
+            }
+        }
+    },
+    "behavior_patterns": [
+        {
+            "name": "working",
+            "indicators": [
+                "laptop",
+                "keyboard",
+                "mouse"
+            ],
+            "duration_threshold": 10,
+            "confidence_threshold": 0.7,
+            "suggestions": [
+                "Optimize your workspace ergonomics for better productivity.",
+                "Consider the 20-20-20 rule to reduce eye strain."
+            ]
+        },
+        {
+            "name": "eating",
+            "indicators": [
+                "fork",
+                "knife",
+                "spoon",
+                "bowl",
+                "cup"
+            ],
+            "duration_threshold": 5,
+            "confidence_threshold": 0.6,
+            "suggestions": [
+                "Practice mindful eating for better digestion.",
+                "Ensure proper hydration during meals."
+            ]
+        },
+        {
+            "name": "relaxing",
+            "indicators": [
+                "couch",
+                "tv",
+                "remote"
+            ],
+            "duration_threshold": 30,
+            "confidence_threshold": 0.65,
+            "suggestions": [
+                "Consider brief stretching exercises during TV time.",
+                "Maintain proper viewing distance to protect your eyes."
+            ]
+        },
+        {
+            "name": "sleeping",
+            "indicators": [
+                "bed",
+                "pillow"
+            ],
+            "duration_threshold": 60,
+            "confidence_threshold": 0.8,
+            "suggestions": [
+                "Maintain a consistent sleep schedule for better rest.",
+                "Reduce blue light exposure before bedtime."
+            ]
+        }
+    ],
+    "anomaly_patterns": [
+        {
+            "name": "forgotten_drink",
+            "trigger": {
+                "object": "bottle",
+                "duration": 60,
+                "confidence": 0.7
+            },
+            "message": "Your drink has been unattended for over an hour."
+        },
+        {
+            "name": "late_night_work",
+            "trigger": {
+                "objects": [
+                    "laptop",
+                    "keyboard"
+                ],
+                "time_range": [
+                    "22:00",
+                    "06:00"
+                ],
+                "confidence": 0.8
+            },
+            "message": "Late-night work detected. Consider resting to maintain productivity."
+        },
+        {
+            "name": "unusual_activity",
+            "trigger": {
+                "objects": [
+                    "knife",
+                    "scissors"
+                ],
+                "time_range": [
+                    "00:00",
+                    "05:00"
+                ],
+                "confidence": 0.75
+            },
+            "message": "Unusual activity detected during late hours."
+        }
+    ]
+}

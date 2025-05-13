@@ -1,0 +1,14 @@
+2025-05-13 23:29:14,414 - WARNING - From C:\Users\kruth\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-13 23:29:14,962 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-05-13 23:29:27,001 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-05-13 23:29:53,294 - INFO - Action handler started.
+2025-05-13 23:29:55,199 - INFO - Detection system started.
+2025-05-13 23:30:20,385 - INFO - Activity data saved to ai_models\activity_log.json
+2025-05-13 23:30:20,385 - INFO - Action handler stopped.
+2025-05-13 23:39:15,867 - WARNING - From C:\Users\kruth\AppData\Local\Programs\Python\Python312\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-05-13 23:39:17,759 - INFO - Action handler started.
+2025-05-13 23:39:19,907 - INFO - Detection system started.
+2025-05-13 23:39:30,903 - INFO - Activity data saved to ai_models\activity_log.json
+2025-05-13 23:39:30,903 - INFO - Action handler stopped.
