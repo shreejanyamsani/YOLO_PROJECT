@@ -1,0 +1,58 @@
+{
+    "yolo_model": "yolov8m.pt",
+    "camera_id": 0,
+    "frame_width": 1280,
+    "frame_height": 720,
+    "confidence_threshold": 0.6,
+    "detection_cooldown": 20,
+    "target_classes": [
+        "person",
+        "chair",
+        "table",
+        "laptop",
+        "bottle",
+        "cup",
+        "keyboard",
+        "tv",
+        "mouse",
+        "remote",
+        "book",
+        "clock",
+        "bed",
+        "couch",
+        "refrigerator",
+        "sink"
+    ],
+    "context_rules": [
+        {
+            "trigger": [
+                "bottle",
+                "cup"
+            ],
+            "min_count": 1,
+            "confidence": 0.7,
+            "message": "Stay hydrated with your drink!",
+            "action": "reminder"
+        },
+        {
+            "trigger": [
+                "laptop",
+                "keyboard",
+                "mouse"
+            ],
+            "min_count": 2,
+            "confidence": 0.75,
+            "message": "Set up a productivity timer?",
+            "action": "question"
+        },
+        {
+            "trigger": [
+                "person"
+            ],
+            "min_count": 2,
+            "confidence": 0.8,
+            "message": "Switch to group mode?",
+            "action": "alert"
+        }
+    ]
+}
